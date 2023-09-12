@@ -3,7 +3,6 @@
 namespace Mrfansi\Cloudflare\Exceptions;
 
 use Exception;
-use Symfony\Contracts\HttpClient\Exception\ExceptionInterface;
 
 /**
  * Class ApiException
