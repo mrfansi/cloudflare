@@ -7,9 +7,7 @@ trait Create
     /**
      * Send a create request
      *
-     * @param array $params user's params
-     *
-     * @return array
+     * @param  array  $params user's params
      */
     public static function create(array $params = []): array
     {
@@ -19,5 +17,4 @@ trait Create
 
         return static::_request('POST', $url, $params);
     }
-
 }
