@@ -9,40 +9,40 @@ use Mrfansi\Cloudflare\Operations\RetrieveAll;
 
 class Lists
 {
-  use Create;
-  use Request;
-  use RetrieveAll;
+    use Create;
+    use Request;
+    use RetrieveAll;
 
-  /**
-   * Instantiate base URL
-   */
-  public static function classUrl(): string
-  {
-    return '/accounts/' . config('cloudflare.account') . '/rules/lists';
-  }
+    /**
+     * Instantiate base URL
+     */
+    public static function classUrl(): string
+    {
+        return '/accounts/'.config('cloudflare.account').'/rules/lists';
+    }
 
-  /**
-   * Instantiate required params for Create
-   */
-  public static function createReqParams(): array
-  {
-    return ['kind', 'name'];
-  }
+    /**
+     * Instantiate required params for Create
+     */
+    public static function createReqParams(): array
+    {
+        return ['kind', 'name'];
+    }
 
-  /**
-   * Get list items by list_id
-   *
-   * @param string $list_id list ID
-   * @return array please check for responses parameters here
-   * https://developers.cloudflare.com/api/operations/lists-get-list-items
-   *
-   * @throws ApiException
-   */
-  public static function listItems(string $list_id, $params = []): array
-  {
-    $url = static::classUrl()
-      . '/' . $list_id . '/items';
+    /**
+     * Get list items by list_id
+     *
+     * @param  string  $list_id list ID
+     * @return array please check for responses parameters here
+     * https://developers.cloudflare.com/api/operations/lists-get-list-items
+     *
+     * @throws ApiException
+     */
+    public static function listItems(string $list_id, $params = []): array
+    {
+        $url = static::classUrl()
+          .'/'.$list_id.'/items';
 
-    return static::_request('GET', $url, $params);
-  }
+        return static::_request('GET', $url, $params);
+    }
 }
