@@ -3,8 +3,8 @@
 namespace Mrfansi\Cloudflare\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use Mrfansi\Cloudflare\CloudflareServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {

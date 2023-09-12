@@ -9,8 +9,8 @@ use Illuminate\Support\Facades\Facade;
  */
 class Cloudflare extends Facade
 {
-  protected static function getFacadeAccessor()
-  {
-    return \Mrfansi\Cloudflare\Cloudflare::class;
-  }
+    protected static function getFacadeAccessor()
+    {
+        return \Mrfansi\Cloudflare\Cloudflare::class;
+    }
 }
