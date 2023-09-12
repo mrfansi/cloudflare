@@ -4,18 +4,18 @@ namespace Mrfansi\Cloudflare\Operations;
 
 trait Update
 {
-    /**
-     * Send an update request
-     *
-     * @param  string  $id     data ID
-     * @param  array  $params user's params
-     */
-    public static function update(string $id, array $params = []): array
-    {
-        self::validateParams($params, static::updateReqParams());
+  /**
+   * Send an update request
+   *
+   * @param string $id data ID
+   * @param array $params user's params
+   */
+  public static function update(string $id, array $params = []): array
+  {
+    self::validateParams($params, static::updateReqParams());
 
-        $url = static::classUrl().'/'.$id;
+    $url = static::classUrl() . '/' . $id;
 
-        return static::_request('PATCH', $url, $params);
-    }
+    return static::_request('PATCH', $url, $params);
+  }
 }
